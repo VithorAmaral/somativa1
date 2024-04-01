@@ -1,28 +1,36 @@
-name: CI
+name: CI/CD Pipeline
 
 on:
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-
   workflow_dispatch:
 
 jobs:
   build_job:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - run: python3 --version
+    - name: Checkout repository
+      uses: actions/checkout@v3
 
-  test-job:
+    - name: Verify Python version
+      run: python3 --version
+
+  test_job:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - run: python3 hello.py
+    - name: Checkout repository
+      uses: actions/checkout@v3
 
-  deploy-job:
+    - name: Test
+      run: python3 hello.py
+
+  deploy_job:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - run: echo "Finalizado"
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Deploy
+      run: echo "Finalizado"
