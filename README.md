@@ -1,4 +1,2 @@
-Alunos: Carlos Eduardo Prestes Boal
-Valdir Arruda Junior
-Ana Paula Barbosa da Cruz Szezech
+Aluno: Vithor Pinto da Cruz do Amaral
 Materia : DEVOPS
